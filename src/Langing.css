@@ -1,0 +1,173 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100%); }
+  80% {
+    transform: translate(25%); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(100%); }
+  80% {
+    transform: translate(-25%); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(100%); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato",sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: blue;
+  line-height: 1.7;
+  color: #777;
+  padding: 0px; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #55c57a, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 200ms; }
+  .heading-secondary:hover {
+    transform: skewY(10deg) skewX(5deg);
+    text-shadow: 20px 10px 3 rgba(0, 0, 0, 0.2); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-bottom-margin-8 {
+  margin-bottom: 0.8rem; }
+
+.about-section {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 200ms;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
+
+.btn-white {
+  background-color: white;
+  color: #777; }
+
+.btn ::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn-white::after {
+  background-color: blue; }
+
+.btn:hover::after {
+  transform: scale(1.2);
+  opacity: 0; }
+
+.btn-animated {
+  animation-name: moveInButton;
+  animation-duration: 5s; }
+
+.row {
+  background-color: rgb(200, 41, 41);
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 16rem; }
+  .row .col-1-of-2 {
+    width: calc((100%-16rem)/2); }
+
+/*this code is to perform reset*/
+.header {
+  height: 95vh;
+  background-image: url('./images/chatting2.jpg');
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  position: relative; }
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px; }
+
+.logo {
+  position: absolute;
+  height: 35px; }
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: aqua;
+ }
+
+.header-sub-main {
+  color: #fff;
+  display: block;
+  letter-spacing: 35px;
+  font-size: 60px;
+  font-weight: 400;
+  text-transform: capitalize;
+  animation-name: moveInLeft;
+  animation-duration: 5s; }
+
+.header-sub-bottom {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 15px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  animation-name: moveInRight;
+  animation-duration: 5s; }
